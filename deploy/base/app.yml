@@ -1,0 +1,24 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: home
+spec:
+  template:
+    metadata:
+      name: 'kn-app-name'
+      annotations:
+        # Service可启动的最小POD数，未设置/或设置为0时，即scale-to-zero特性，该配置用于控制「冷启动时间」
+        # autoscaling.knative.dev/minScale: "0"
+        # Service可启动的最大POD数，未设置时KPA将根据请求数创建POD且数量无限制，该配置用于控制「成本」
+        # autoscaling.knative.dev/maxScale: "100"
+
+        # 指每个POD能接受的最大请求数是「10」，KPA会根据该值调整POD的数量——即动态扩(缩)容
+        autoscaling.knative.dev/target: "10"
+
+        # autoscaling.knative.dev/window: "60s"
+        # autoscaling.knative.dev/targetBurstCapacity: "100"
+    spec:
+      containers:
+        - image: homepage-image.name
+          ports:
+            - containerPort: 8080

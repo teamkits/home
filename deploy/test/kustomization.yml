@@ -1,0 +1,25 @@
+namePrefix: test-
+namespace: test-teamkits
+
+resources:
+  - ../base
+
+patchesStrategicMerge:
+  - conf.yml
+
+images:
+  - name: homepage-image.name
+    newName: registry.cn-zhangjiakou.aliyuncs.com/team-kits/home
+    newTag: '20211212152331'
+
+patchesJson6902:
+  # update the {revision-name}
+  - patch: |-
+      - op: replace
+        path: /spec/template/metadata/name
+        value: test-home-04
+    target:
+      group: serving.knative.dev
+      version: v1
+      kind: Service
+      name: home

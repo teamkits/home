@@ -1,0 +1,29 @@
+commonLabels:
+  app: home
+
+commonAnnotations:
+  maintainer: wangwii@foxmail.com
+
+resources:
+  - namespace.yml
+  - conf.yml
+  - app.yml
+
+patchesJson6902:
+  # 删除kustomize自动为Service生成的[selector]元素
+  - patch: |-
+      - op: remove
+        path: /spec/selector
+    target:
+      group: serving.knative.dev
+      version: v1
+      kind: Service
+      name: home
+  # 删除namespace的common label
+  - patch: |-
+      - op: remove
+        path: /metadata/labels
+    target:
+      version: v1
+      kind: Namespace
+      name: teamkits
