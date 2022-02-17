@@ -1,6 +1,6 @@
 version: '3'
 services:
-  app:
+  web:
     build: .
     image: rex/homesite:latest
     ports:
@@ -9,3 +9,8 @@ services:
       - LANG=en_US.UTF-8
     volumes:
       - ./www:/usr/share/nginx/html/tmp
+  build:
+    image: node:17-alpine
+    volumes:
+      - /app:/app
+    working_dir: /app

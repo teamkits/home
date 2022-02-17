@@ -1,7 +1,12 @@
 .git/
 .idea/
+.github/
 .gitignore
 .dockerignore
+
+bin/
+deploy/
+src/node_modules
 
 README.md
 Dockerfile
