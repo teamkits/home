@@ -1,6 +1,19 @@
 ## Home site
 A service for homepage.
 
+### Tasks
+* 更新主页面内容
+* 完成备案码更新
+* 完成用户注册（from， 微信、钉钉、QQ、
+* 个人工具
+  + 秘密管理
+  + 
+* 团队工具
+  + 邮件
+  + 聊天
+  + wiki
+
+
 ### TODO
 * deploy with k-native.
   + http://<service-name>.<namespace.name>.<YOUR-KNative-Gateway-DomainName>
