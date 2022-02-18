@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    image: rex/homesite:latest
+    image: ${IMAGE:-rex/homesite}:${TAG:-latest}
     ports:
       - "80:80"
       - "443:443"
@@ -10,6 +10,7 @@ services:
       - LANG=en_US.UTF-8
     volumes:
       - ./www:/usr/share/nginx/html/tmp
+
   build:
     image: node:17-alpine
     volumes:
