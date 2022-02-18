@@ -8,10 +8,10 @@
       <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
         信息化与数字化技术快速发展，<br/>
         不知不觉中，已然深入到生活的方方面面。<br/>
-        在工作中更是如此，善用数字化协同工具，才能和小伙伴们一起高效工作、快乐生活！
+        在工作中更是要善用数字化协同工具，才能和小伙伴们一起高效工作、快乐生活！
       </p>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-        <div v-for="item in tools" class="rounded-md shadow" :key="item.name" style="margin-right: 3px;">
+        <div v-for="item in tools" class="rounded-md shadow" :key="item.name" style="margin: 3px;">
           <a :href="item.href"
               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
             {{ item.name }}

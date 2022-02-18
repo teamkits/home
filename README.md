@@ -2,8 +2,9 @@
 A service for homepage.
 
 ### Tasks
-* 更新主页面内容
-* 完成备案码更新
+* [x]更新主页面内容
+* [x]完成备案码更新
+* 完成互联网网站登记
 * 完成用户注册（from， 微信、钉钉、QQ、
 * 个人工具
   + 秘密管理
@@ -24,6 +25,11 @@ A service for homepage.
 ### Used
 * headlessui: https://headlessui.dev/vue/tabs
 * Tailwind CSS: https://tailwindcss.com
+
+### Resources
+* SVG: https://www.svgrepo.com/vectors/alien/multicolor/2
+    https://www.iconpacks.net/free-icon/camp-fire-5626.html
+* SVG Icons: https://www.reshot.com/free-svg-icons/item/business-team-XPWYRZGJ2H/
 
 ### Refs
 * [Kustomize插件指南](https://www.bookstack.cn/read/kubernetes-kubectl-zh/4fd01457567d06e1.md)

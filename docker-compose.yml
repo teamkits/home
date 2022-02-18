@@ -5,6 +5,7 @@ services:
     image: rex/homesite:latest
     ports:
       - "80:80"
+      - "443:443"
     environment:
       - LANG=en_US.UTF-8
     volumes:

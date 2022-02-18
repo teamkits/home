@@ -14,4 +14,4 @@ COPY nginx /
 # COPY www /usr/share/nginx/html/
 COPY --from=builder /app/dist /usr/share/nginx/html/
 RUN echo "$(date +'%Y%m%d%H%M')" > /usr/share/nginx/html/version.txt
-HEALTHCHECK CMD wget --quiet --tries=1 --spider http://localhost:$PORT/version.txt || exit 1
+HEALTHCHECK CMD wget --quiet --tries=1 --spider https://localhost:$PORT/version.txt || exit 1
